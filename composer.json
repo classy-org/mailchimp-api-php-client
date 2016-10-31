@@ -1,0 +1,13 @@
+{
+    "name": "classy-org/mailchimp-api-php-client",
+    "description": "Simple wrapper around Guzzle Http Client to interact with Mailchimp API v3.0",
+    "authors": [
+        {
+            "name": "PGBI",
+            "email": "pbarrau@classy.org"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "6.*"
+    }
+}
