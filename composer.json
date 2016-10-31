@@ -9,5 +9,10 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Classy\\": "src"
+        }
     }
 }
