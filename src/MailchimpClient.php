@@ -54,7 +54,20 @@ class MailchimpClient
     }
 
     /**
-     * Forward any call to guzzle client.
+     * Perform a request
+     *
+     * @param $method
+     * @param string $uri
+     * @param array $options
+     * @return mixed|ResponseInterface
+     */
+    public function request($method, $uri = '', array $options = [])
+    {
+        return $this->client->request($method, $uri, $options);
+    }
+
+    /**
+     * Forward any other call to guzzle client.
      *
      * @param  string  $method
      * @param  array  $parameters
