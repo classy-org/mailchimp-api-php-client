@@ -31,6 +31,13 @@ class MailchimpClient
      */
     public function __construct($api_key, array $config = [])
     {
+        if (!is_string($api_key)) {
+            throw new \Exception("api_key must be a string");
+        }
+        if (strpos($api_key, '-') === false) {
+            throw new \Exception("api_key $api_key is invalid");
+        }
+
         list($key, $dc) = explode('-', $api_key);
 
         $config = array_merge($config, [
